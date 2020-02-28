@@ -1,0 +1,66 @@
+<html>
+<head>
+  <title>Sip Screen</title> 
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- gives browser instructions on how to control
+  page dimensions and scaling -->
+
+  <link href="css/bootstrap.css" rel="stylesheet">
+  <link href="css/bootstrap-theme.css" rel="stylesheet">
+  <link href="css/plant.css" rel="stylesheet">
+
+  <script src="js/jquery-1.11.0.js"></script>
+  <script src="/js/bootstrap.min.js"></script>
+  <script src="/js/takesip.js"></script>
+
+  <!-- Google Analytics -->
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-158765349-3', 'auto');
+  ga('require', 'GTM-5SRP3WP');
+  ga('send', 'pageview');
+  </script>
+  <!-- End Google Analytics -->
+  </head>
+<body>
+  <div class="container">
+    <h2><i class="arrow leftArrow" onclick="history.back(-1)"></i>Sip</h2>
+    <hr size="150">
+
+
+    {{#if viewAlt}}
+    <div class="cup sip-tracker" id="0" style="width:100%">
+        <img src="/images/Cup0.png" style="width:40%" ... />
+    </div>
+    {{else}}
+      <div class="cup sip-tracker" id="0" style="width:100%">
+        <img src="/images/Cup0.png" style="width:40%" ... />
+      </div>
+      <h3>Drink 8 cups of water a day to grow your plant! Each drink applies to every friend on your friend's list.</h3>
+    {{/if}}
+
+    <form id="updateForm" role="form" method="get" action="/update">
+        <input type="submit" id="submitBtn" class="btn btn-default" value="Take a Drink!"></input>
+    </form>
+
+
+    <div class="btn-group" style="width:100%">
+      {{#if viewAlt}}
+        <a href="sipAlt"><button class="fillbtn" style="width:19%">Sip</button></a>
+      {{else}}
+        <a href="sip"><button class="fillbtn" style="width:19%">Sip</button></a>
+      {{/if}}
+      <a href="friends"><button class="fillbtn" style="width:19%">Friends</button></a>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src= "js/bootstrap.js"></script>
+
+</body>
+</html>
